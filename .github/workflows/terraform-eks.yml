@@ -33,6 +33,8 @@ jobs:
           # Apne role ka exact ARN yahan dalein ya GitHub Secret use karein:
           role-to-assume: arn:aws:iam::132597215176:role/github-actions-role
           aws-region: ap-south-1 # Jahan EKS cluster deploy ho raha hai
+          audience: sts.amazonaws.com
+
 
       - name: Setup Terraform
         uses: hashicorp/setup-terraform@v3
